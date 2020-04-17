@@ -8,5 +8,9 @@ const queue = new Queue('default', {
   },
 })
 
-queue.add('cars', { color: 'blue' })
-
+queue.add(
+  'cars',
+  { color: 'blue' }
+  // This will trigger an infinite loop:
+  // { attempts: 3 }
+)
